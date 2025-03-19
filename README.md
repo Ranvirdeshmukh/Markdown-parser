@@ -2,7 +2,7 @@
 
 A lightweight, real-time Markdown parser that processes text in small chunks (tokens) and renders it with proper formatting as it arrives. This parser is specifically designed to handle the streaming nature of text coming from sources like AI models or real-time APIs.
 
-## 📚 Overview
+##  Overview
 
 This project simulates and handles the scenario where text doesn't arrive all at once but streams in small, sometimes awkwardly split chunks. It demonstrates how to parse and render Markdown formatting correctly even when syntax markers (like backticks) might be split across multiple tokens.
 
@@ -13,7 +13,7 @@ This project simulates and handles the scenario where text doesn't arrive all at
 - **Code formatting**: Supports both inline code (single backticks) and code blocks (triple backticks)
 - **State machine architecture**: Robustly tracks parsing state across token boundaries
 
-## 🛠️ Technical Implementation
+##  Technical Implementation
 
 ### State Machine
 
@@ -35,7 +35,7 @@ The parser applies appropriate styling to different types of content:
 - **Inline Code**: Gray background, monospace font, and rounded corners
 - **Code Blocks**: Block display, gray background, monospace font, and preserved whitespace
 
-## 📋 How It Works
+## How It Works
 
 1. A sample Markdown document is split into random-sized tokens (2-20 characters)
 2. These tokens are processed one by one at regular intervals (every 20ms)
@@ -43,7 +43,7 @@ The parser applies appropriate styling to different types of content:
 4. As tokens are processed, HTML elements with appropriate styling are created and added to the page
 5. The state machine ensures that formatting is preserved even across token boundaries
 
-## 💻 Installation
+##  Installation
 
 ```bash
 # Clone the repository
@@ -56,7 +56,7 @@ cd Markdown-parser
 npm install
 ```
 
-## 🚀 Usage
+##  Usage
 
 ```bash
 # Build the project
@@ -68,13 +68,13 @@ npm run dev
 
 After building, open `dist/index.html` in your browser and click the "STREAM" button to see the Markdown parser in action.
 
-## 📁 Project Structure
+##  Project Structure
 
 - **src/MarkdownParser.ts**: The main parser implementation with the state machine
 - **public/index.html**: The HTML page that displays the parsed Markdown
 - **package.json**: Project configuration and dependencies
 
-## 🔍 Code Explanation
+##  Code Explanation
 
 ### The Main Components
 
@@ -102,7 +102,7 @@ For example, when encountering a backtick:
 
 The parser ensures that even if these markers are split across multiple tokens, the formatting is preserved correctly.
 
-## 🔮 Potential Improvements
+##  Potential Improvements
 
 - Support for additional Markdown features like headings, lists, and emphasis
 - Handling for nested formatting
